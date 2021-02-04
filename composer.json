@@ -1,0 +1,21 @@
+{
+  "name": "joschaefer/email-wizard",
+  "type": "project",
+  "description": "Turns Excel files and templates into one-click mail merge",
+  "keywords": [
+    "mail",
+    "merge"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": "^7.4|^8.0",
+    "phpoffice/phpspreadsheet": "^1.16"
+  },
+  "require-dev": {
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  }
+}
