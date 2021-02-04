@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Worksheet\CellIterator;
-use PhpOffice\PhpSpreadsheet\Worksheet\ColumnIterator;
 use PhpOffice\PhpSpreadsheet\Worksheet\RowIterator;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
