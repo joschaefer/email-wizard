@@ -31,7 +31,7 @@ header_remove('X-Powered-By');
 <body>
     <div class="container py-5">
         <h1 class="mb-4">E-Mail Wizard: <span class="text-muted">Schritt 3</span></h1>
-        <ul class="list-unstyled">
+        <div class="row row-cols-4 row-cols-md-6">
             <?php
 
             $i = 1;
@@ -42,16 +42,16 @@ header_remove('X-Powered-By');
                 $subject = str_replace($_POST['headers'], $data, trim($_POST['subject']));
                 $message = str_replace($_POST['headers'], $data, trim($_POST['message']));
 
-                echo '<li class="mb-1"><a href="mailto:' . urlencode($email) . '?' . http_build_query([
+                echo '<div class="col pb-2 text-nowrap"><a href="mailto:' . urlencode($email) . '?' . http_build_query([
                         'subject' => $subject,
                         'body' => $message,
-                    ], '', '&', PHP_QUERY_RFC3986) . '" onclick="this.style.color = \'green\';">E-Mail #' . $i . '</a></li>';
+                    ], '', '&', PHP_QUERY_RFC3986) . '" onclick="this.style.color = \'green\';">E-Mail #' . $i . '</a></div>';
                 $i++;
 
             }
 
             ?>
-        </ul>
+        </div>
     </div>
 </body>
 </html>
