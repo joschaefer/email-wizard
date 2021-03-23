@@ -36,6 +36,8 @@ header_remove('X-Powered-By');
 
             $i = 1;
 
+            $replyTo = trim($_POST['reply-to']);
+
             foreach ($_POST['data'] as $data) {
 
                 $email = $data[intval($_POST['email'])];
@@ -44,6 +46,7 @@ header_remove('X-Powered-By');
 
                 echo '<div class="col pb-2 text-nowrap"><a href="mailto:' . urlencode($email) . '?' . http_build_query([
                         'subject' => $subject,
+                        'reply-to' => $replyTo,
                         'body' => $message,
                     ], '', '&', PHP_QUERY_RFC3986) . '" onclick="this.style.color = \'green\';">E-Mail #' . $i . '</a></div>';
                 $i++;

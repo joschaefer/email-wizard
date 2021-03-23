@@ -52,6 +52,7 @@ $import = parse($worksheet);
             <div class="row my-3">
                 <div class="col">
                     <input type="text" name="subject" class="form-control form-control-lg mb-3" value="" placeholder="Betreff" required>
+                    <input type="text" name="reply-to" class="form-control form-control-lg mb-3" value="" placeholder="Antwort an (optional)">
                     <textarea name="message" id="message" class="form-control form-control-lg" placeholder="Nachricht" rows="10" required></textarea>
                 </div>
                 <div class="col-3 bg-light rounded p-3">
